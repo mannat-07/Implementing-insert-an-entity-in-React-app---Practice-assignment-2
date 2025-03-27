@@ -8,6 +8,10 @@ import './Dashboard.css'; // Optional: Import CSS for styling
 const Dashboard = () => {
   const navigate = useNavigate();
 
+  const goToForm = () =>{
+    navigate('/form')
+  }
+
   // Sample movie data. In a real application, this might come from an API or global state.
   const [movies, setMovies] = useState([
     {
@@ -33,6 +37,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
+      <button style={{position: 'fixed', right: '40px', top:'20px', border: '1px solid black', backgroundColor: '#FF8C00', color: 'white'}}onClick={goToForm}>Add Movie</button>
       <header className="dashboard-header">
         <h1>Movie Collection</h1>
       </header>
